@@ -1,0 +1,24 @@
+package net.htwater.think.D12_1;
+
+/**
+ * Created by 96955 on 2019/4/24.
+ */
+public class InheritingException {
+    public static void main(String[] args) {
+        try {
+            f();
+        } catch (SimpleException e) {
+            e.printStackTrace();
+            System.out.println("Throw SimpleException! f()");
+        }
+    }
+
+    public static void f() throws SimpleException {
+        System.out.println("Throw SimpleException!");
+//        throw new SimpleException();
+    }
+}
+
+class SimpleException extends Exception {
+
+}
