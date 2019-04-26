@@ -5,17 +5,17 @@ package net.htwater.think.D12_1;
  */
 public class InheritingException {
     public static void main(String[] args) {
+        InheritingException inheritingException=new InheritingException();
         try {
-            f();
+            inheritingException.f();
         } catch (SimpleException e) {
             e.printStackTrace();
-            System.out.println("Throw SimpleException! f()");
         }
     }
 
-    public static void f() throws SimpleException {
+    public void f() throws SimpleException {
         System.out.println("Throw SimpleException!");
-//        throw new SimpleException();
+        throw new SimpleException();
     }
 }
 
