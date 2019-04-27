@@ -68,4 +68,48 @@ public class TreeNode {
         }
     }
 
+    public TreeNode frontSearch(int i) {
+        TreeNode resultTreeNode = null;
+
+        if (value == i) {
+            return this;
+        }
+
+        if (leftNode != null) {
+            resultTreeNode = leftNode.frontSearch(i);
+        }
+        if (resultTreeNode != null) {
+            return resultTreeNode;
+        }
+        if (rightNode != null) {
+            resultTreeNode = rightNode.frontSearch(i);
+        }
+        if (resultTreeNode != null) {
+            return resultTreeNode;
+        }
+
+        return resultTreeNode;
+    }
+
+    public void delete(int i) {
+
+        if (leftNode != null) {
+            if (leftNode.value == i) {
+                leftNode = null;
+            } else {
+                leftNode.delete(i);
+            }
+
+        }
+
+        if (rightNode != null) {
+            if (rightNode.value == i) {
+                rightNode = null;
+            } else {
+                rightNode.delete(i);
+            }
+
+        }
+
+    }
 }

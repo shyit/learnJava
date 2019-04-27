@@ -23,11 +23,20 @@ public class BinaryTreeTest {
         rootRight.setLeftNode(new TreeNode(6));
         rootRight.setRightNode(new TreeNode(7));
 
+//        binaryTree.frontShow();
+//        System.out.println();
+//        binaryTree.middleShow();
+//        System.out.println();
+//        binaryTree.afterShow();
+//
+//        TreeNode resultTreeNode=binaryTree.frontSearch(3);
+//
+//        System.out.println(resultTreeNode==rootRight);
+
         binaryTree.frontShow();
+        binaryTree.delete(1);
         System.out.println();
-        binaryTree.middleShow();
-        System.out.println();
-        binaryTree.afterShow();
+        binaryTree.frontShow();
     }
 
 }

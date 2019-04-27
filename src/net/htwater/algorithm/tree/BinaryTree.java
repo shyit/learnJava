@@ -14,15 +14,27 @@ public class BinaryTree {
         this.root = root;
     }
 
-    public void frontShow(){
+    public void frontShow() {
         root.frontShow();
     }
 
-    public void middleShow(){
+    public void middleShow() {
         root.middleShow();
     }
 
-    public void afterShow(){
+    public void afterShow() {
         root.afterShow();
+    }
+
+    public TreeNode frontSearch(int i) {
+        return root.frontSearch(i);
+    }
+
+    public void delete(int i) {
+        if (root.value == i) {
+            root = null;
+            return;
+        }
+        root.delete(i);
     }
 }
