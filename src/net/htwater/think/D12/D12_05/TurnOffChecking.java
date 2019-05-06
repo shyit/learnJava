@@ -1,4 +1,4 @@
-package net.htwater.think.D12_05;
+package net.htwater.think.D12.D12_05;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

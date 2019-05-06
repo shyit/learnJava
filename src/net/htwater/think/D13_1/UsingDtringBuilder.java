@@ -8,6 +8,7 @@ import java.util.Random;
 public class UsingDtringBuilder {
 
     public static Random random=new Random(47);
+
     public String toString(){
         StringBuilder stringBuilder=new StringBuilder("[");
         for (int i=0;i<25;i++){
@@ -16,6 +17,10 @@ public class UsingDtringBuilder {
         }
         stringBuilder.append("]");
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args){
+        System.out.println(new UsingDtringBuilder().toString());
     }
 }
 
