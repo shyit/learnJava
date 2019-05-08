@@ -1,4 +1,4 @@
-package net.htwater.think.D13_2;
+package net.htwater.think.D13.D13_2;
 
 import java.io.PrintStream;
 import java.util.Formatter;

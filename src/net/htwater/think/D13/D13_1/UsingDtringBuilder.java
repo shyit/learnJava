@@ -1,4 +1,4 @@
-package net.htwater.think.D13_1;
+package net.htwater.think.D13.D13_1;
 
 import java.util.Random;
 
