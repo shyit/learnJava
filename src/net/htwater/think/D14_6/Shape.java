@@ -16,10 +16,18 @@ public class Shape {
         List<Shape> shapeList= Arrays.asList(new Circle(),new Square(),new Triangle());
         for (Shape shape:shapeList){
             shape.draw();
+            try {
+                Class c=Class.forName("Shape");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
 class Circle extends Shape {
+    static {
+        System.out.println("Loading Circle");
+    }
     @Override
     public void draw() {
         System.out.println("Circle.draw()");
@@ -27,6 +35,9 @@ class Circle extends Shape {
 }
 
 class Square extends Shape {
+    static {
+        System.out.println("Loading Square");
+    }
     @Override
     public void draw() {
         System.out.println("Square.draw()");
@@ -34,6 +45,9 @@ class Square extends Shape {
 }
 
 class Triangle extends Shape {
+    static {
+        System.out.println("Loading Triangle");
+    }
     @Override
     public void draw() {
         System.out.println("Triangle.draw()");
