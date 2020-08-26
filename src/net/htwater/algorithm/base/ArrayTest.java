@@ -1,6 +1,6 @@
 package net.htwater.algorithm.base;
 
-public class Test {
+public class ArrayTest {
     public static void main(String[] args) {
 //        ShyArray shyArray = new ShyArray();
 //        shyArray.add(1);
