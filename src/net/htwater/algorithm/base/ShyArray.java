@@ -114,12 +114,6 @@ public class ShyArray {
 
         }
 
-//        if (-1 == index) {
-//            System.out.println("目标元素不在数组中");
-//        } else {
-//            System.out.println("目标元素所在的下标 = " + index);
-//        }
-
         return index;
     }
 
