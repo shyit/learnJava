@@ -36,4 +36,37 @@ public class Node {
         return null==this.next;
     }
 
+    //删除下一个节点
+    public void removeNext(){
+        if (null!=this.next&&null!=this.next.next){
+            this.next=this.next.next;
+        }else {
+            this.next=null;
+        }
+    }
+
+    //显示所有节点信息
+    public void show(){
+        Node nodeCurrent=this;
+        while (true){
+            System.out.print(nodeCurrent.data+" ");
+            if (null==nodeCurrent.next){
+                break;
+            }else {
+                nodeCurrent=nodeCurrent.next;
+            }
+        }
+        System.out.println();
+
+    }
+
+    //插入节点
+    public void after(Node node){
+        if (null!=this.next){
+            node.next=this.next;
+            this.next=node;
+        }else {
+            this.next=node;
+        }
+    }
 }

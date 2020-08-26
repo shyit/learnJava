@@ -7,15 +7,24 @@ public class NodeTest {
         Node node3=new Node(33);
         Node node4=new Node(44);
 
-        System.out.println(node1.checkLastBoolean());
+        node1.append(node2).append(node3).append(node4);
 
-        node1.append(node4).append(node3).append(node2);
-        System.out.println(node1.checkLastBoolean());
-        System.out.println(node2.checkLastBoolean());
+//        System.out.println(node1);
+//        System.out.println(node1.next);
+//        System.out.println(node1.next.next);
+//        System.out.println(node1.next.next.next);
+//        System.out.println("========");
+//        node1.removeNext();
+//        System.out.println(node1);
+//        System.out.println(node1.next);
+//        System.out.println(node1.next.next);
+//        System.out.println(node1.next.next.next);
+        node1.show();
 
-        System.out.println(node1.data);
-        System.out.println(node1.next.data);
-        System.out.println(node1.next.next.data);
-        System.out.println(node1.next.next.next.data);
+        node1.after(new Node(15));
+        node1.show();
+
+        node4.after(new Node(45));
+        node1.show();
     }
 }
