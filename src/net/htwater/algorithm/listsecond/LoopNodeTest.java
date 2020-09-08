@@ -1,4 +1,4 @@
-package net.htwater.algorithm.base;
+package net.htwater.algorithm.listsecond;
 
 public class LoopNodeTest {
     public static void main(String[] args) {

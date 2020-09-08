@@ -1,4 +1,4 @@
-package net.htwater.algorithm.eightsort;
+package net.htwater.algorithm.sortsecond;
 
 /**
 * 类  名：SelectSort

@@ -1,4 +1,4 @@
-package net.htwater.algorithm.eightsort;
+package net.htwater.algorithm.sortsecond;
 
 import java.util.Arrays;
 import java.util.LinkedList;

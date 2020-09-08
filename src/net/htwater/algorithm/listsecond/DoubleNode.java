@@ -1,4 +1,4 @@
-package net.htwater.algorithm.base;
+package net.htwater.algorithm.listsecond;
 
 public class DoubleNode {
     //上一个节点

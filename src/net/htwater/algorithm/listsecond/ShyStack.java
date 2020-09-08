@@ -1,9 +1,9 @@
-package net.htwater.algorithm.base;
+package net.htwater.algorithm.listsecond;
 
-public class ShyQueue {
+public class ShyStack {
     int[] elements;
 
-    public ShyQueue() {
+    public ShyStack() {
         elements=new int[0];
     }
 
@@ -22,9 +22,8 @@ public class ShyQueue {
         System.out.println();
     }
 
-
     //添加数据
-    public void add(int value){
+    public void push(int value){
         int[] elementsTemp=new int[elements.length+1];
         for (int i = 0; i < elements.length; i++) {
             elementsTemp[i]=elements[i];
@@ -36,16 +35,16 @@ public class ShyQueue {
     }
 
     //取出数据
-    public int poll(){
+    public int pop(){
         if (elements.length==0){
             throw new RuntimeException("当前栈为空");
         }
 
-        int value=elements[0];
+        int value=elements[elements.length-1];
 
         int[] elementsTemp=new int[elements.length-1];
         for (int i = 0; i < elementsTemp.length; i++) {
-            elementsTemp[i]=elements[i+1];
+            elementsTemp[i]=elements[i];
         }
 
         elements=elementsTemp;
