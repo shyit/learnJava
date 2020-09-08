@@ -1,22 +1,35 @@
 package net.htwater.algorithm.eightsort;
 
+import java.util.Arrays;
+
+/**
+* 类  名：MergeSort
+* 描  述：归并排序
+* <p>
+* 功能一：
+*
+* @author ShenHaiyun no.HT151 软件部移动组
+* @date
+*/
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 7, 2, 23, 9, 4, 1, 0, 5, 7};
 
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
 
         mergeSort(arr, 0, arr.length-1);
 
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
     }
 
+    /*
+     * 归并排序
+     * 1.申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
+     * 2.设定两个指针，最初位置分别为两个已经排序序列的起始位置
+     * 3.比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置
+     * 4.重复步骤3直到某一指针到达序列尾
+     * 5.将另一序列剩下的所有元素直接复制到合并序列尾
+     * */
     private static void mergeSort(int[] arr, int start, int end) {
         if (start==end){
             return;
