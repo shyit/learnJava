@@ -1,4 +1,4 @@
-package net.htwater.algorithmmuke.sort.array;
+package net.htwater.algorithmmuke.array;
 
 import java.util.Arrays;
 
@@ -101,6 +101,14 @@ public class HtArray<E> {
         return data[index];
     }
 
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    public E getFirst() {
+        return get(0);
+    }
+
     public void set(int index, E element) {
         if (index < 0 || index > size) {
             throw new RuntimeException("HtArray set越界");
@@ -170,7 +178,6 @@ public class HtArray<E> {
         }
         data = dataNew;
     }
-
 
 
     @Override

@@ -1,4 +1,4 @@
-package net.htwater.algorithmmuke.sort.array;
+package net.htwater.algorithmmuke.array;
 
 public class HtArrayTest {
     public static void main(String[] args) {
