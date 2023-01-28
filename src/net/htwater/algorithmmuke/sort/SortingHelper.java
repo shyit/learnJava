@@ -1,8 +1,10 @@
 package net.htwater.algorithmmuke.sort;
 
+import net.htwater.algorithmmuke.sort.insertsort.InsertSort;
 import net.htwater.algorithmmuke.sort.selectsort.SelectSort;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class SortingHelper {
     private SortingHelper() {
@@ -21,7 +23,7 @@ public class SortingHelper {
 
     public static <E extends Comparable<E>> void sortTest(String sortName, E[] arr) {
 
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
 
         Long startTime = System.nanoTime();
 
@@ -29,12 +31,15 @@ public class SortingHelper {
             case "selectSort":
                 SelectSort.sort(arr);
                 break;
+            case "insertSort":
+                InsertSort.sort(arr);
+                break;
             default:
         }
 
         Long endTime = System.nanoTime();
 
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
 
 
         if (SortingHelper.isSorted(arr)) {

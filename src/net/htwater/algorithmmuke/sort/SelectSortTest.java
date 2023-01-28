@@ -5,14 +5,14 @@ import java.util.Random;
 public class SelectSortTest {
     public static void main(String[] args) {
 
-        int[] dataSizes = {1000, 100000};
+        int[] dataSizes = {10,100};
 
 //        int count=1000;
 
         for (int i = 0; i < dataSizes.length; i++) {
             Integer[] nums = generateRandomArray(dataSizes[i]);
 
-            SortingHelper.sortTest("selectSort", nums);
+            SortingHelper.sortTest("insertSort", nums);
         }
 
 
