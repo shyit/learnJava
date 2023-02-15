@@ -16,6 +16,14 @@ public class HtArray<E> {
         this(0);
     }
 
+    public HtArray(E[] arr) {
+        data = (E[]) new Object[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            data[i] = arr[i];
+        }
+        size = arr.length;
+    }
+
     public E[] getData() {
         return data;
     }

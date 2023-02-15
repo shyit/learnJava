@@ -17,6 +17,13 @@ public class MaxHeap<E extends Comparable<E>> {
         data = new HtArray<>();
     }
 
+    public MaxHeap(E[] arr) {
+        data = new HtArray<>(arr);
+        for (int i = data.getSize() - 1; i >= 0; i--) {
+            siftDown(i);
+        }
+    }
+
     public int size() {
         return data.getSize();
     }
@@ -56,8 +63,8 @@ public class MaxHeap<E extends Comparable<E>> {
 
         if (data.get(k).compareTo(parentElement) > 0) {
             E tempElement = parentElement;
-            data.set(parent(k),currentElement);
-            data.set(k,tempElement);
+            data.set(parent(k), currentElement);
+            data.set(k, tempElement);
             siftUp(parent(k));
         }
     }
@@ -102,6 +109,13 @@ public class MaxHeap<E extends Comparable<E>> {
             data.set(maxIndex, tempElement);
             siftDown(maxIndex);
         }
+    }
+
+    public E replace(E e) {
+        E ret = findMax();
+        data.set(0, e);
+        siftDown(0);
+        return ret;
     }
 
 
