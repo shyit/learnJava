@@ -62,7 +62,7 @@ public class SegmentTree<E> {
             throw new RuntimeException("index is illegal");
         }
 
-        return segmentQuery(0, 0, data.length-1, queryLeft, queryRight);
+        return segmentQuery(0, 0, data.length - 1, queryLeft, queryRight);
     }
 
     private E segmentQuery(int treeIndex, int l, int r, int queryLeft, int queryRight) {
@@ -84,6 +84,35 @@ public class SegmentTree<E> {
         E rightResult = segmentQuery(rightTreeIndex, middle + 1, r, middle + 1, queryRight);
 
         return merger.merge(leftResult, rightResult);
+    }
+
+    public void set(int index, E e) {
+        if (index < 0 || index >= data.length) {
+            throw new RuntimeException("index is illegal");
+        }
+
+        data[index] = e;
+
+        set(0, 0, data.length - 1, index, e);
+    }
+
+    private void set(int treeIndex, int left, int right, int index, E e) {
+        if (left == right) {
+            tree[treeIndex] = e;
+            return;
+        }
+
+        int middle = (left + right) / 2;
+        int leftTreeIndex = leftChild(treeIndex);
+        int rightTreeIndex = rightChild(treeIndex);
+
+        if (index >= middle) {
+            set(rightTreeIndex, middle + 1, right, index, e);
+        } else {
+            set(leftTreeIndex, left, middle, index, e);
+        }
+
+        tree[treeIndex] = merger.merge(tree[leftTreeIndex], tree[rightTreeIndex]);
     }
 
     @Override
